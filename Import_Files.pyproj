@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" DefaultTargets="Build">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{30d169d9-bcfb-4a9b-8d7a-4e5446de9f07}</ProjectGuid>
+    <ProjectHome />
+    <StartupFile>Jarvis_Connect.py</StartupFile>
+    <SearchPath />
+    <WorkingDirectory>.</WorkingDirectory>
+    <OutputPath>.</OutputPath>
+    <ProjectTypeGuids>{888888a0-9f3d-457c-b088-3a5042f75d52}</ProjectTypeGuids>
+    <LaunchProvider>Standard Python launcher</LaunchProvider>
+    <InterpreterId />
+    <InterpreterVersion />
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)' == 'Debug'" />
+  <PropertyGroup Condition="'$(Configuration)' == 'Release'" />
+  <PropertyGroup>
+    <VisualStudioVersion Condition=" '$(VisualStudioVersion)' == '' ">10.0</VisualStudioVersion>
+    <PtvsTargetsFile>$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\Python Tools\Microsoft.PythonTools.targets</PtvsTargetsFile>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="Client.py" />
+    <Compile Include="Console.py" />
+    <Compile Include="cryptography.py" />
+    <Compile Include="Immutable.py" />
+    <Compile Include="Interpret.py" />
+    <Compile Include="Jarvis_6.py" />
+    <Compile Include="Jarvis_Connect.py" />
+    <Compile Include="Message.py" />
+    <Compile Include="Mobile.py" />
+    <Compile Include="mutable.py" />
+    <Compile Include="Stream.py" />
+    <Compile Include="test.py" />
+    <Compile Include="test2.py" />
+    <Compile Include="testinterpret.py" />
+    <Compile Include="testsocket.py" />
+    <Compile Include="Voice.py" />
+    <Compile Include="weather.py" />
+    <Compile Include="__main__.py" />
+  </ItemGroup>
+  <Import Project="$(PtvsTargetsFile)" Condition="Exists($(PtvsTargetsFile))" />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.Common.targets" Condition="!Exists($(PtvsTargetsFile))" />
+</Project>
