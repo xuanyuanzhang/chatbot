@@ -33,24 +33,15 @@ class Jarvis(object):
             sys.exit()
         self.wifi_thr.start()
             
-        while 1:
-            if self.wifi_current <= self.wifi_dict['Weak']:  # if connection is weak or better
-                print "Creating Interpret and Stream objects..."
-                # Create Interpret Object
-                self.oInterpret = Interpret.Interpret()
-                # Create Stream Object
-                self.oStream = Stream.Stream(self.oInterpret)
-                # Create Notifying Object
-                self.notifier = threading.Thread(target=self.notify, args=())
-                # Wifi Control on Interpret and Output
-                print "Task Completed."
-                break
-            elif self.wifi_current == self.wifi_dict['Very Weak']: # wait until weak or better
-                print 'Waiting for stronger ping status...'
-                time.sleep(1)
-            else:   # no wifi, then search
-                print 'Searching for wifi...'
-                time.sleep(1)
+	print "Creating Interpret and Stream objects..."
+	# Create Interpret Object
+	self.oInterpret = Interpret.Interpret()
+	# Create Stream Object
+	self.oStream = Stream.Stream(self.oInterpret)
+	# Create Notifying Object
+	self.notifier = threading.Thread(target=self.notify, args=())
+	# Wifi Control on Interpret and Output
+	print "Task Completed."
 
     def initiate(self):
         if not self.state:
